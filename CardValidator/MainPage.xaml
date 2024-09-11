@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardValidator.MainPage">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="20" BackgroundColor="White" VerticalOptions="Start" HorizontalOptions="Center">
+            
+            <!-- Credit Card Frame -->
+            <Border StrokeShape="RoundRectangle 20" BackgroundColor="#4B0082" HeightRequest="200" WidthRequest="350" HorizontalOptions="Center">
+                <Grid Padding="10">
+                    
+                    <!-- Card Logo -->
+                    <Image Source="visa.jpg" Aspect="AspectFit" HeightRequest="30" WidthRequest="60" HorizontalOptions="End" VerticalOptions="Start"/>
+
+                    <!-- Card Number Entries -->
+                    <Grid ColumnSpacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <Entry Grid.Column="0" x:Name="CardNumberEntry1"
+                               Placeholder="1234"
+                               PlaceholderColor="#6D6D6B"
+                               Keyboard="Numeric"
+                               MaxLength="4"
+                               FontSize="20"
+                               TextColor="White"
+                               BackgroundColor="#6A0D91"
+                               WidthRequest="70"
+                               Margin="0, 0, 5, 0"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextChanged="OnCardNumberTextChanged"
+                               Focused="OnEntryFocused"/>
+                       
+                        <Entry Grid.Column="1" x:Name="CardNumberEntry2"
+                               Placeholder="5678"
+                               PlaceholderColor="#6D6D6B"
+                               Keyboard="Numeric"
+                               MaxLength="4"
+                               FontSize="20"
+                               TextColor="White"
+                               BackgroundColor="#6A0D91"
+                               WidthRequest="70"
+                               Margin="0, 0, 5, 0"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextChanged="OnCardNumberTextChanged"
+                               Focused="OnEntryFocused"/>
+                       
+                        <Entry Grid.Column="2" x:Name="CardNumberEntry3"
+                               Placeholder="9876"
+                               PlaceholderColor="#6D6D6B"
+                               Keyboard="Numeric"
+                               MaxLength="4"
+                               FontSize="20"
+                               TextColor="White"
+                               BackgroundColor="#6A0D91"
+                               WidthRequest="70"
+                               Margin="0, 0, 5, 0"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextChanged="OnCardNumberTextChanged"
+                               Focused="OnEntryFocused"/>
+                       
+                        <Entry Grid.Column="3" x:Name="CardNumberEntry4"
+                               Placeholder="5432"
+                               PlaceholderColor="#6D6D6B"
+                               Keyboard="Numeric"
+                               MaxLength="4"
+                               FontSize="20"
+                               TextColor="White"
+                               BackgroundColor="#6A0D91"
+                               WidthRequest="70"
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"
+                               TextChanged="OnCardNumberTextChanged"
+                               Focused="OnEntryFocused"/>
+                    </Grid>
+                    
+                    <!-- Cardholder Name -->
+                    <Label Text="JOHN DOE" 
+                           FontSize="16" 
+                           TextColor="White" 
+                           FontAttributes="Bold"
+                           HorizontalOptions="Start" 
+                           VerticalOptions="End"
+                           Margin="10, 0, 0, 15"/>
+                    
+                    <!-- Expiry Date -->
+                    <Label Text="12/24" 
+                           FontSize="16" 
+                           TextColor="White"
+                           HorizontalOptions="End" 
+                           VerticalOptions="End"
+                           Margin="0, 0, 10, 15"/>
+                </Grid>
+            </Border>
+
+            <!-- Submit Button -->
+            <Button Text="Submit"
+                    BackgroundColor="#6A0D91"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="10"
+                    HeightRequest="35"
+                    Padding="10,0"
+                    HorizontalOptions="Center"
+                    Clicked="OnSubmitClicked" />
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
